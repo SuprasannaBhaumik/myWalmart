@@ -1,0 +1,32 @@
+{
+  "name": "walmart",
+  "version": "1.0.0",
+  "description": "my custom store of items",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuprasannaBhaumik/myWalmart.git"
+  },
+  "keywords": [
+    "node",
+    "aws",
+    "graphql",
+    "ses",
+    "sqs",
+    "sns",
+    "amplify",
+    "cognito",
+    "dynamodb",
+    "lambda",
+    "appsync"
+  ],
+  "author": "suprasanna bhaumik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuprasannaBhaumik/myWalmart/issues"
+  },
+  "homepage": "https://github.com/SuprasannaBhaumik/myWalmart#readme"
+}
