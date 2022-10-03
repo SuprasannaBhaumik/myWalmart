@@ -1,5 +1,5 @@
 # myWalmart
-Custom walmart store
+Custom e-commerce store
 
 
 - User signup and signin is performed using AWS Cognito user pool
