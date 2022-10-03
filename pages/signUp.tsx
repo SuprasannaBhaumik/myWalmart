@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import Popup from 'reactjs-popup';
 import 'reactjs-popup/dist/index.css';
 
-function SignUp() {
+ function SignUp() {
 
     Auth.configure( {
         userPoolId: 'ap-south-1_AVaN4EgAd',
@@ -31,6 +31,13 @@ function SignUp() {
         }).catch(err => console.error(err));
     }
 
+    const resendCode = () => {
+        setPopup(false);
+        Auth.resendSignUp(username).then(result => {
+            setPopup(true);
+        });
+    }
+
     const signUp = () => {
 
         //if both the passwords match
@@ -52,6 +59,7 @@ function SignUp() {
         } else {
             setPasswordMismatch(true);
         }
+    }
 
     return (
         <div>
@@ -65,7 +73,8 @@ function SignUp() {
                 <div>
                     <input type={'text'} value={confirmationCode} onChange={e => setConfirmationCode(e.target.value)}/>
                 </div>
-                <button onClick={() => resumeSignUp()}></button>
+                <button onClick={() => resumeSignUp()}>Confirm Code</button>
+                <a onClick={() => resendCode()}>Resend code</a>
             </Popup>
 
             <div>
@@ -89,7 +98,7 @@ function SignUp() {
             </div>
         </div>
     );
+    
 }
 
 export default SignUp;
-
