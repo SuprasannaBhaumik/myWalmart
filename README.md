@@ -4,16 +4,17 @@ Custom e-commerce store
 
 - User signup and signin is performed using AWS Cognito user pool
 - **aws-amplify** library is used to perform the: 
-    -  signup (Auth.signUp), 
-    -  confirm with confirmation code to complete the sign up process (Auth.confirmSignUp and Auth.resendSignUp).
-    -  login (Auth.login)
-    -  logout (Auth.logout)
+    -  signup (Auth.signUp ), 
+        -  confirm with confirmation code to complete the sign up process (Auth.confirmSignUp and Auth.resendSignUp).
+    -  login (Auth.signIn)
+    -  logout (Auth.signOut)
+    -  forgot password (Auth.forgotPassword & Auth.forgotPasswordSubmit)
 
 - next js is used for routing, api management
     - pages folder contain routes, e.g.
         -  login.tsx handles /login, 
         -  signUp.tsx handles /signUp
-    - It can handle custom routes via next/router programatically,      router.push('/login')
+    - It can handle custom routes via next/router programatically, router.push('/login')
     - api folder is used for APIs.
 
 

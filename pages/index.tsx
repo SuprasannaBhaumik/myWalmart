@@ -4,8 +4,10 @@ import router from 'next/router';
 
 function index() {
 
-    Auth.configure({
-
+    Auth.configure( {
+        userPoolId: 'ap-south-1_AVaN4EgAd',
+        userPoolWebClientId: '4toogc6pd49ml9i6704ii6an7m',
+        region: 'ap-south-1'
     });
 
     const [user, setUser] = useState(null);
@@ -30,9 +32,11 @@ function index() {
             {!user && <div><a href='/login'>Please login</a></div>}
             {user && 
                 <div>
-                    <div>{`Username: ${user?.username}`}</div>
-                    <div>{`Email: ${user?.attributes?.email}`}</div>
+                    <div>Welcome &nbsp;
+                        <a href='/profile' >{user?.username}</a>
+                    </div>
                     <div><button onClick={ () => logout()}>Logout</button></div>
+
                 </div>
             }
         </>
