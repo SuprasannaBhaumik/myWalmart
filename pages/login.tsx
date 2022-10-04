@@ -32,8 +32,6 @@ function LoginPage() {
 
             window.sessionStorage.setItem("user", JSON.stringify(user));
 
-            //push the user to a redux store
-            //index page has to pull the data from the redux store
             router.push('/');
 
         }).catch( err => console.error(err));
